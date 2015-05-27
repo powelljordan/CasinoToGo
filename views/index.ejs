@@ -9,10 +9,11 @@
 	    <link rel="stylesheet" href="../assets/css/bootswatch.min.css">
 	    <link rel="stylesheet" href="../stylesheets/index.css">
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 		<script src="../javascripts/index.js"></script>
 	</head>
 	<body>
-	    <div class="navbar navbar-default navbar-fixed-top">
+<!-- 	    <div class="navbar navbar-default navbar-fixed-top">
 	      <div class="container">
 	        <div class="navbar-header">
 	          <a href="../" class="navbar-brand">Home</a>
@@ -75,49 +76,85 @@
 
 	        </div>
 	      </div>
-	    </div>
+	    </div> -->
 	    <!-- Nav Bar stuff-->
 
-	    <div class="col-lg-4" style = "margin-top:4em">
+	    <div class="col-lg-4" style = "margin-top:0em">
             <h2 id="nav-pills"></h2>
             <div class="bs-component">
               <ul class="nav nav-pills">
-                <li class="active"><a href="#">Moves</a>
+                <li class="active">
+                	<a href="#moveTab" data-toggle="pill">Moves</a>
                 </li>
-                <li><a href="#">Calendar</a></li>
-                <li class="active"><a href="/Music.ejs">Music</a></li>
-                <li><a href="#">News</a></li>
+                <li>
+                	<a href="#musicTab" data-toggle="pill">Music</a>
+                </li>
+                <li class="active">
+                	<a href="#calendarTab" data-toggle="pill">Calendar</a>
+                </li>
+                <li>
+                	<a href="#newsTab" data-toggle="pill">News</a>
+                </li>
               </ul>
             </div>
         </div>
-	    <div id = "videoPlayer">
-			<iframe width="400" height="300" src="https://www.youtube.com/embed/Hu_mtYueXys" frameborder="0" allowfullscreen>
-			</iframe>
-		</div>
-		<div class="col-lg-4" style = "margin-top:4em">
-            <h2 id="nav-pills"></h2>
-            <div class="bs-component">
-              <ul class="nav nav-pills">
-                <li><a href="#">All Moves</a>
-                </li>
-                <li><a href="#">Starts with . . .</a></li>
-                <li><a href="#">Level</a></li>
-                <li><a href="#">Rueda</a></li>
-              </ul>
-            </div>
-        </div>
-		<div class="list-group">
-		  <a href="#" class="list-group-item active">
-		    Abanico
-		  </a>
-		  <a href="#" class="list-group-item">Balsero
-		  </a>
-		  <a href="#" class="list-group-item">Croqueta y aspirina
-		  </a>
-		  <a href="#" class="list-group-item">Dame stigmata
-		  </a>
-		  <a href="#" class="list-group-item">Evelyn
-		  </a>
+        <div class="tab-content">
+        	<div class="tab-pane active" id="moveTab">
+			    <div id = "videoPlayer" class="responsiveFrameContainer">
+					<iframe class = "responsiveFrame" width="400" height="300" src="https://www.youtube.com/embed/Hu_mtYueXys" frameborder="0" allowfullscreen>
+					</iframe>
+				</div>
+				<div class="col-lg-4">
+		            <h2 id="nav-pills"></h2>
+		            <div class="bs-component">
+		              <ul class="nav nav-pills" data-toggle="pill">
+		                <li><a href="#moves">All Moves</a>
+		                </li>
+		                <li><a href="#start">Starts with . . .</a></li>
+		                <li><a href="#">Level</a></li>
+		                <li><a href="#">Rueda</a></li>
+		              </ul>
+		            </div>
+		        </div>
+				<div class="list-group">
+				  <a href="#" class="list-group-item active">
+				    Abanico
+				  </a>
+				  <a href="#" class="list-group-item">Balsero
+				  </a>
+				  <a href="#" class="list-group-item">Croqueta y aspirina
+				  </a>
+				  <a href="#" class="list-group-item">Dame stigmata
+				  </a>
+				  <a href="#" class="list-group-item">Evelyn
+				  </a>
+				</div>
+			</div>
+			<div class="tab_pane" id = "musicTab">
+				<iframe src="https://embed.spotify.com/?uri=spotify:track:5JunxkcjfCYcY7xJ29tLai" frameborder="0" allowtransparency="true"></iframe>
+				<iframe src="https://embed.spotify.com/?uri=spotify:user:erebore:playlist:788MOXyTfcUb1tdw4oC7KJ&view=coverart" frameborder="0" allowtransparency="true"></iframe>
+				<iframe src="https://embed.spotify.com/?uri=spotify:user:erebore:playlist:788MOXyTfcUb1tdw4oC7KJ&theme=white" frameborder="0" allowtransparency="true"></iframe>
+				<iframe src="https://embed.spotify.com/?uri=spotify:user:erebore:playlist:788MOXyTfcUb1tdw4oC7KJ&theme=white&view=coverart" frameborder="0" allowtransparency="true"></iframe>
+			</div>
+			<div class="tab_pane responsiveFrameContainer" id = "calendarTab">
+				<iframe class = "responsiveFrame" src="https://www.google.com/calendar/embed?height=300&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=e3vcputhi5ub27o6istkfgsltg%40group.calendar.google.com&amp;color=%23865A5A&amp;ctz=America%2FNew_York" style=" border-width:0 " width="400" height="300" frameborder="0" scrolling="no"></iframe>
+			</div>
+			<div class="tab_pane" id = "newsTab">
+				<h4>News</h4>
+				<div class="list-group">
+				  <a href="#" class="list-group-item active">
+				    Abanico
+				  </a>
+				  <a href="#" class="list-group-item">Balsero
+				  </a>
+				  <a href="#" class="list-group-item">Croqueta y aspirina
+				  </a>
+				  <a href="#" class="list-group-item">Dame stigmata
+				  </a>
+				  <a href="#" class="list-group-item">Evelyn
+				  </a>
+				</div>
+			</div>
 		</div>
 
 
