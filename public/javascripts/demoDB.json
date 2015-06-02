@@ -1,0 +1,7 @@
+movesDB = {
+	{title: Abanico, startWith: Sombrero, level: intermediate, rueda: no},
+	{title: Balsero, startWith: Sombrero, level: intermediate, rueda: no},
+	{title: Croqueta y Apirina: startWith: null, level: beginner, rueda: no},
+	{title: Dame Directo, startWith: null, level: beginner, rueda: no},
+	{title: Evelyn, startsWith: Adios, level: beginner, rueda: no}
+}

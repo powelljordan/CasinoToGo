@@ -1,0 +1,30 @@
+Angular.js notes
+
+A MODULE contains different components of an AngularJS app
+
+var app = angular.module("myApp", []);
+
+
+A CONTROLLER manages the app's data
+
+app.controller('MainController', ['$scope', function($scope){
+  $scope.title = 'The kite runner';
+  $scope.promo = "Sneak preview available";
+  $scope.product = {
+    name: 'The Book of Trees',
+    price:19,
+   	pubdate: new Date('2014', '03', '08')
+  }
+}]);
+
+An EXPRESSION displayes values on the page
+
+{{ product.price}}
+
+A FILTER formats the value of an expression
+
+{{ product.price | currency }}
+
+
+A DIRECTIVE binds behavior to html elements
+ng-repeat ng-source ng-click
