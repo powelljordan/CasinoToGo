@@ -109,10 +109,14 @@ myApp.controller('MainController', ['$scope',
 			previouslySelected = index;
 		}
 		//Default video. I should connect this to the DB. It will eventually show a performance video (probably our latest)
-		$scope.link = "https://www.youtube.com/embed/Hu_mtYueXys";
+		$scope.link = "https://www.youtube.com/embed/MfsWfvK6wcA";
 		$scope.updateVideoLink = function(index){
 			$("#videoFrame").attr('src', $scope.moves[index].url);
 			
+		}
+
+		$scope.updateVideoLinkFromSearch = function(link) {
+			$("#videoFrame").attr('src', link);
 		}
 
 		//Adds new moves to the allDataMoves array
@@ -167,10 +171,13 @@ myApp.controller('MainController', ['$scope',
 				$("#moveInput").hide();
 			}
 			else{
+				$scope.hideMoves();
 				for(i in $scope.allDataMoves){
 					var move = $scope.allDataMoves[i];
 					if (move.title.toLowerCase() === searchedMove.toLowerCase()){
-						alert("Found it!");
+						$scope.updateMovesWithoutSaving($scope.allDataMoves);
+						$scope.showMoves();
+						$scope.updateVideoLinkFromSearch(move.url);
 					}
 				}
 			}
