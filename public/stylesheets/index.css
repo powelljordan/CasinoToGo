@@ -49,3 +49,11 @@
 #calendarTab{
 	text-align: center;
 }
+
+#moveInput{
+	display: none;
+}
+
+#moves{
+	display:none;
+}

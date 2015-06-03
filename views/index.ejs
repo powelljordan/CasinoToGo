@@ -46,30 +46,46 @@
 					</iframe>
 				</div>
 				<br>
-				<div id = "moveInput">
+				<div class="col-lg-6" ng-controller="MainController">
+				    <div class="input-group">
+				      <input type="text" id="searchBox" class="form-control" placeholder="Search for...">
+				      <span class="input-group-btn">
+				        <button class="btn btn-default" type="button" ng-click="searchForMove()">Go!</button>
+				      </span>
+				    </div><!-- /input-group -->
+				  </div><!-- /.col-lg-6 -->
+				<br>
+				<div id = "moveInput" ng-controller="MainController">
 					<input type="text" id = "titleInput" placeholder = "Title">
 					<input type="text" id = "startsWithInput" placeholder ="Starts with . . . ">
 					<input type="text" id = "levelInput" placeholder ="Level">
 					<input type="text" id = "rueda" placeholder ="Rueda move?">
 					<input type="text" id = "url" placeholder= "URL">
-					<button type="button" id = "submit">Add move</button>
+					<button type="button" ng-click="pushDB()">Add move</button>
 				</div>
-				<div class="col-lg-4">
+				<div class="col-lg-4" ng-controller="MainController">
 		            <h2 id="nav-pills"></h2>
 		            <div class="bs-component">
 		              <ul class="nav nav-pills" data-toggle="pill">
-		                <li><a href="#moveTab">All Moves</a>
+		                <li><a href="#movesSection" id = "allMovesTab" ng-click="queriedMoves.length = 0; updateMoves(allDataMoves); keys.length = 0; showMoves()">All</a>
 		                </li>
-		                <li><a href="#moveTab">Starts with . . .</a></li>
-		                <li><a href="#moveTab">Level</a></li>
-		                <li><a href="#moveTab">Rueda</a></li>
+		                <li><a href="#movesSection" id = "startsWithTab" ng-click="queriedMoves.length = 0; updateMoves(startsWithMoves); getKeys(); hideMoves()">Starts with</a></li>
+		                <li><a href="#movesSection" id = "levelTab" ng-click="queriedMoves.length = 0; updateMoves(levelMoves); getKeys(); hideMoves()">Level</a></li>
+		                <li><a href="#movesSection" id = "ruedaTab" ng-click="queriedMoves.length = 0; updateMoves(ruedaMoves); getKeys(); hideMoves()">Rueda</a></li>
 		              </ul>
 		            </div>
 		        </div>
-				<div class="list-group main" ng-controller="MainController">
-				  <a href="" class="list-group-item" ng-repeat="move in moves" ng-click="move.sel = !move.sel; toggle($index); updateVideoLink($index)" ng-class="{'active': move.sel}">{{ move.title }}
-				   
-				  </a>
+		        <div id = "movesSection">
+			        <div class="list-group" ng-controller="MainController">
+			        	<a href="#moves" class="list-group-item" ng-click="updateMovesWithoutSaving(queriedMoves); updateMovesWithCategoryChange(category); showMoves()" ng-repeat="category in keys">{{ category }}</a>
+			        </div>
+
+
+					<div id = "moves" class="list-group" ng-controller="MainController">
+						<h3>Moves</h3>
+					  	<a href="" class="list-group-item" ng-repeat="move in moves" ng-click="move.sel = !move.sel; toggle($index); updateVideoLink($index)" ng-class="{'active': move.sel}">{{ move.title }}
+					  	</a>
+					</div>
 				</div>
 			</div>
 	<!-- 		<div class="tab_pane" id = "musicTab">
