@@ -83,7 +83,7 @@
 
 					<div id = "moves" class="list-group" ng-controller="MainController">
 						<h3>Moves</h3>
-					  	<a href="" class="list-group-item" ng-repeat="move in moves" ng-click="move.sel = !move.sel; toggle($index); updateVideoLink($index)" ng-class="{'active': move.sel}">{{ move.title }}
+					  	<a href="" class="list-group-item" ng-repeat="move in moves" ng-click=" toggle($index); updateVideoLink($index)">{{ move.title }}
 					  	</a>
 					</div>
 				</div>
