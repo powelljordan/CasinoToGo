@@ -111,7 +111,7 @@ myApp.controller('MainController', ['$scope',
 		//Default video. I should connect this to the DB. It will eventually show a performance video (probably our latest)
 		$scope.link = "https://www.youtube.com/embed/sWYZkyvxheo";
 		$scope.updateVideoLink = function(index){
-			alert("oh yeah I'm running");
+			alert($scope.moves[index].url);
 			$("#videoFrame").attr('src', $scope.moves[index].url);
 
 			
