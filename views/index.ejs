@@ -85,7 +85,7 @@
 
 					<div id = "moves" class="list-group" ng-controller="MainController">
 						<h3>Moves</h3>
-					  	<a href="" class="list-group-item" ng-repeat="move in moves" ng-click=" toggle($index); updateVideoLink($index)">{{ move.title }}
+					  	<a href="#videoPlayer" class="list-group-item" ng-repeat="move in moves" ng-click=" toggle($index); updateVideoLink($index)">{{ move.title }}
 					  	</a>
 					</div>
 				</div>
@@ -117,7 +117,7 @@
 
 
 	<script>
-		optimizeYouTubeEmbeds();
+		// optimizeYouTubeEmbeds();
 	</script>
 
 	</body>
