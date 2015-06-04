@@ -13,7 +13,6 @@
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
 		<script src="https://cdn.firebase.com/js/client/2.2.5/firebase.js"></script>
-		
 		<script src="https://cdn.firebase.com/libs/angularfire/1.1.1/angularfire.min.js"></script>
 		<script src="../javascripts/demoDB.js"></script>
 		<script src="../javascripts/myApp.js"></script>
@@ -66,15 +65,15 @@
 					<input type="text" id = "url" placeholder= "URL">
 					<button type="button" ng-click="pushDB()">Add move</button>
 				</div>
-				<div class="col-lg-4" ng-controller="MainController">
+				<div class="col-lg-4" ng-controller="MainController" id="movesHeading">
 		            <h2 id="nav-pills"></h2>
 		            <div class="bs-component">
 		              <ul class="nav nav-pills" data-toggle="pill">
-		                <li><a href="#movesSection" id = "allMovesTab" ng-click="queriedMoves.length = 0; updateMoves(allDataMoves); keys.length = 0; showMoves()">All</a>
+		                <li><a href="#movesHeading" id = "allMovesTab" ng-click="queriedMoves.length = 0; updateMoves(allDataMoves); keys.length = 0; showMoves()">All</a>
 		                </li>
-		                <li><a href="#movesSection" id = "startsWithTab" ng-click="queriedMoves.length = 0; updateMoves(startsWithMoves); getKeys(); hideMoves()">Starts with</a></li>
-		                <li><a href="#movesSection" id = "levelTab" ng-click="queriedMoves.length = 0; updateMoves(levelMoves); getKeys(); hideMoves()">Level</a></li>
-		                <li><a href="#movesSection" id = "ruedaTab" ng-click="queriedMoves.length = 0; updateMoves(ruedaMoves); getKeys(); hideMoves()">Rueda</a></li>
+		                <li><a href="#movesHeading" id = "startsWithTab" ng-click="queriedMoves.length = 0; updateMoves(startsWithMoves); getKeys(); hideMoves()">Starts with</a></li>
+		                <li><a href="#movesHeading" id = "levelTab" ng-click="queriedMoves.length = 0; updateMoves(levelMoves); getKeys(); hideMoves()">Level</a></li>
+		                <li><a href="#movesHeading" id = "ruedaTab" ng-click="queriedMoves.length = 0; updateMoves(ruedaMoves); getKeys(); hideMoves()">Rueda</a></li>
 		              </ul>
 		            </div>
 		        </div>
