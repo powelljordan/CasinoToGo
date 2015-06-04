@@ -47,3 +47,18 @@ function LoadYoutubeVidOnPreviewClick(id,w ,h) {
     var div=document.getElementById("skipser-youtubevid-"+id);
     div.parentNode.replaceChild( iframe, div)
 }
+
+function respondify(){
+  $('iframe[src*="embed.spotify.com"]').each( function() {
+    $(this).css('width',$(this).parent(1).width());
+    $(this).attr('src',$(this).attr('src'));
+  });
+}
+
+$(document).ready(function(){
+  respondify();
+});
+
+$(window).resize(function() {
+  respondify();
+});
