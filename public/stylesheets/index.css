@@ -13,6 +13,7 @@
 }
 
 #videoPlayer{
+	padding-top: 50px;
 	text-align:center;
 }
 .responsiveFrameContainer{
@@ -38,6 +39,10 @@
 	width:100%;
 	height:100%;
 }
+#moveTab{
+	padding-top: 50px;
+}
+
 #move{
 	padding-top: 50px;
 }
