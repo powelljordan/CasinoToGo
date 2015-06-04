@@ -56,9 +56,9 @@ function respondify(){
 }
 
 $(document).ready(function(){
-  // respondify();
+  respondify();
 });
 
 $(window).resize(function() {
-  // respondify();
+  respondify();
 });
