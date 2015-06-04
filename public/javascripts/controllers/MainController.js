@@ -105,6 +105,7 @@ myApp.controller('MainController', ['$scope',
 			if(previouslySelected != null && $scope.moves[index].title != $scope.moves[previouslySelected].title){
 				$scope.moves[previouslySelected].sel = false;
 			}
+			alert("This is working");
 
 			previouslySelected = index;
 		}
