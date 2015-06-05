@@ -112,7 +112,7 @@ myApp.controller('MainController', ['$scope',
 		$scope.link = "https://www.youtube.com/embed/sWYZkyvxheo";
 		$scope.updateVideoLink = function(index){
 			$("#videoFrame").attr('src', $scope.moves[index].url);
-			alert($scope.moves[index].url);
+			// alert($scope.moves[index].url);
 
 			
 		}
